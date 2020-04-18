@@ -1,0 +1,22 @@
+
+
+<%= simple_form_for([@ticket_list, @ticket_list.ticket_items.build]) do |f| %>
+    <div id="add-form" style=" text-align:center;">
+        <%= f.input :ttype, label: "Pick Ticket Type:", as: :radio_buttons, collection: [['Play 3'], ['Play 4'], ['Lottery']], value_method: :first %>
+        <hr>
+        <div id="pick-numbers" style="display: flex;justify-content: space-evenly;width:100%">
+            <span><%= f.input :num1, collection: 1..9, label: "Pick Number 1" %></span>
+            <span><%= f.input :num2, collection: 1..9, label: "Pick Number 2" %></span>
+            <span><%= f.input :num3, collection: 1..9, label: "Pick Number 3"  %></span>
+            <span><%= f.input :num4, collection: 1..9, label: "Pick Number 4"  %></span>
+        </div>
+        <hr>
+        <div id="pick-case" style="display: flex;justify-content: space-evenly;width:100%">
+            <span><%= f.input :bxnum, as: :decimal, input_html: { step: 0.01 }, label: "BX Amount"  %></span>
+            <span><%= f.input :stnum, as: :decimal, input_html: { step: 0.01 }, label: "ST Amount"  %></span>
+            <span><%= f.input :starnum, as: :decimal, input_html: { step: 0.01 }, label: "* Amount"  %></span>
+            <span><%= f.input :lotnum,as: :decimal, input_html: { step: 0.01 }, label: "Lottery Amount"  %></span>
+        </div>
+        <%= f.button :submit %>
+    </div>
+  <% end %>

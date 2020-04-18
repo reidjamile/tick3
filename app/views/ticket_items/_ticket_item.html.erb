@@ -1,0 +1,27 @@
+
+<table>
+
+    <tr>
+        <th style="border: 1px solid;"> Type:</td>
+        <th style="border: 1px solid;"> Num1:</td>
+        <th style="border: 1px solid;"> Num2:</td>
+        <th style="border: 1px solid;"> Num3:</td>
+        <th style="border: 1px solid;"> Num4:</td>
+        <th style="border: 1px solid;"> BX:</td>
+        <th style="border: 1px solid;"> ST:</td>
+        <th style="border: 1px solid;"> Lottery:</td>
+
+    </tr>
+    <tr>
+        <td style="border: 1px solid;"> <%= ticket_item.ttype %> </td>
+        <td style="border: 1px solid;"> <%= ticket_item.num1 %> </td>
+        <td style="border: 1px solid;"> <%= ticket_item.num2 %> </td>
+        <td style="border: 1px solid;"> <%= ticket_item.num3 %> </td>
+        <td style="border: 1px solid;"> <%= ticket_item.num4 %> </td>
+        <td style="border: 1px solid;"> <%= ticket_item.bxnum %> </td>
+        <td style="border: 1px solid;"> <%= ticket_item.stnum %> </td>
+        <td style="border: 1px solid;"> <%= ticket_item.lotnum %> </td>
+        <td> <%= link_to "Delete", ticket_list_ticket_item_path(@ticket_list, ticket_item.id), method: :delete, data: { confirm: "Are You Sure?" } %> </td>
+    </tr>
+</table>
+<p>  </p>

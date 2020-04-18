@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<h3> Ticket ID #<%= @ticket_list.id %></h3>
+<h4>Ticket Items:</h4>
+
+<div id="ticket-items-wrapper">
+    <%= render @ticket_list.ticket_items %>
+    <div id="form">
+        <%= render "ticket_items/form" %>
+    </div>
+</div>
+
+<%= link_to 'Edit', edit_ticket_list_path(@ticket_list) %> |
+<%= link_to 'Back', ticket_lists_path %>

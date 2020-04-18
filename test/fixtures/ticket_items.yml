@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  num1: MyString
+  num2: MyString
+  num3: MyString
+  num4: MyString
+  bxnum: MyString
+  stnum: MyString
+  lotnum: MyString
+  starnum: MyString
+  ticket_list: one
+
+two:
+  num1: MyString
+  num2: MyString
+  num3: MyString
+  num4: MyString
+  bxnum: MyString
+  stnum: MyString
+  lotnum: MyString
+  starnum: MyString
+  ticket_list: two

@@ -1,3 +1,8 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  
+  resources :ticket_lists do
+    resources :ticket_items
+  end
+  
+  root 'ticket_lists#index'
 end
