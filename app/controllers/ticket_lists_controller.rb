@@ -5,7 +5,7 @@ class TicketListsController < ApplicationController
   # GET /ticket_lists.json
   def index
     @ticket_lists = TicketList.all
-    @ticket_list = TicketList.new
+    
   end
 
   # GET /ticket_lists/1
