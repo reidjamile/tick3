@@ -2,5 +2,12 @@
 
 <%= render 'form', ticket_list: @ticket_list %>
 
+<div id="ticket-items-wrapper">
+    <%= render @ticket_list.ticket_items %>
+    <div id="form">
+        <%= render "ticket_items/form" %>
+    </div>
+</div>
+
 <%= link_to 'Show', @ticket_list %> |
 <%= link_to 'Back', ticket_lists_path %>

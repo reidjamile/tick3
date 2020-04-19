@@ -29,8 +29,8 @@ class TicketListsController < ApplicationController
 
     respond_to do |format|
       if @ticket_list.save
-        format.html { redirect_to @ticket_list, notice: 'Ticket list was successfully created.' }
-        format.json { render :show, status: :created, location: @ticket_list }
+        format.html { redirect_to edit_ticket_list_path(@ticket_list), notice: 'Ticket list was successfully created.' }
+        format.json { render :edit, status: :created, location: @ticket_list }
       else
         format.html { render :new }
         format.json { render json: @ticket_list.errors, status: :unprocessable_entity }
