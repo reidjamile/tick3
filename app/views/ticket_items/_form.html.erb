@@ -1,14 +1,34 @@
+<script>
+function seePlay(x) {
+    if (x==0) {
+        document.getElementById("pplay4").style.display='flex';
+    }else if (x==1)
+    {
+        document.getElementById("pplay4").style.display='none';
+    }else {
+        document.getElementById("pplay4").style.display='none';
+    }
+    return;
+
+}
+</script>
+
 
 
 <%= simple_form_for([@ticket_list, @ticket_list.ticket_items.build]) do |f| %>
     <div id="add-form" style=" text-align:center;">
-        <%= f.input :ttype, label: "Pick Ticket Type:", as: :radio_buttons, collection: [['Play 3'], ['Play 4'], ['Lottery']], value_method: :first %>
+        <%= f.input :ttype,:input_html => { :type => "radio", :id => "p3", :value => "Play3", :onClick => 'seePlay(1)'}, label: "Play3"%>
+        <%= f.input :ttype,:input_html => { :type => "radio", :id => "p4", :value => "Play4", :onClick => 'seePlay(0)'}, label: "Play4"%>
+        <%= f.input :ttype,:input_html => { :type => "radio", :id => "lottery", :value => "Lottery", :onClick => 'seePlay(0)'}, label: "Lottery"%>
         <hr>
         <div id="pick-numbers" style="display: flex;justify-content: space-evenly;width:100%">
             <span><%= f.input :num1, collection: 1..9, label: "Pick Number 1" %></span>
             <span><%= f.input :num2, collection: 1..9, label: "Pick Number 2" %></span>
             <span><%= f.input :num3, collection: 1..9, label: "Pick Number 3"  %></span>
-            <span><%= f.input :num4, collection: 1..9, label: "Pick Number 4"  %></span>
+            <div id="pplay4">
+            
+                <%= f.input :num4, collection: 1..9, label: "Pick Number 4"  %>
+            </div>
         </div>
         <hr>
         <div id="pick-case" style="display: flex;justify-content: space-evenly;width:100%">
