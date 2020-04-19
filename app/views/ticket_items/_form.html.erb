@@ -17,26 +17,31 @@ function seePlay(x) {
 
 <%= simple_form_for([@ticket_list, @ticket_list.ticket_items.build]) do |f| %>
     <div id="add-form" style=" text-align:center;">
+        <div style="display: flex;justify-content: space-evenly;width:100%, float:left;">
         <%= f.input :ttype,:input_html => { :type => "radio", :id => "p3", :value => "Play3", :onClick => 'seePlay(1)'}, label: "Play3"%>
         <%= f.input :ttype,:input_html => { :type => "radio", :id => "p4", :value => "Play4", :onClick => 'seePlay(0)'}, label: "Play4"%>
         <%= f.input :ttype,:input_html => { :type => "radio", :id => "lottery", :value => "Lottery", :onClick => 'seePlay(0)'}, label: "Lottery"%>
+        </div>
+        <br />
         <hr>
-        <div id="pick-numbers" style="display: flex;justify-content: space-evenly;width:100%">
-            <span><%= f.input :num1, collection: 1..9, label: "Pick Number 1" %></span>
-            <span><%= f.input :num2, collection: 1..9, label: "Pick Number 2" %></span>
-            <span><%= f.input :num3, collection: 1..9, label: "Pick Number 3"  %></span>
+        <br />
+        <span id="pick-numbers" style="display: flex;justify-content: space-evenly;width:60%; float:left;">
+            <span><%= f.input :num1, collection: 1..9, label: "#1" %></span>
+            <span><%= f.input :num2, collection: 1..9, label: "#2" %></span>
+            <span><%= f.input :num3, collection: 1..9, label: "#3"  %></span>
             <div id="pplay4">
-            
-                <%= f.input :num4, collection: 1..9, label: "Pick Number 4"  %>
+                <%= f.input :num4, collection: 1..9, label: "#4"  %>
             </div>
-        </div>
-        <hr>
-        <div id="pick-case" style="display: flex;justify-content: space-evenly;width:100%">
-            <span><%= f.input :bxnum, as: :decimal, input_html: { step: 0.01 }, label: "BX Amount"  %></span>
-            <span><%= f.input :stnum, as: :decimal, input_html: { step: 0.01 }, label: "ST Amount"  %></span>
-            <span><%= f.input :starnum, as: :decimal, input_html: { step: 0.01 }, label: "* Amount"  %></span>
-            <span><%= f.input :lotnum,as: :decimal, input_html: { step: 0.01 }, label: "Lottery Amount"  %></span>
-        </div>
+        </span>        
+        <span id="pick-case" style="display: flex;justify-content: space-evenly;width:40%, float:left;">
+            <span><%= f.input :bxnum, as: :decimal, input_html: { step: 0.01 }, label: "BX"  %></span>
+            <span><%= f.input :stnum, as: :decimal, input_html: { step: 0.01 }, label: "ST"  %></span>
+            <span><%= f.input :starnum, as: :decimal, input_html: { step: 0.01 }, label: "*"  %></span>
+            <span><%= f.input :lotnum,as: :decimal, input_html: { step: 0.01 }, label: "Lottery"  %></span>
+        </span>
+        <br />
+        
+        <br />
         <%= f.button :submit %>
     </div>
   <% end %>

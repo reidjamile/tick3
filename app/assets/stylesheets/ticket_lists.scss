@@ -2,6 +2,19 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 /* Style the tab */
+body {
+  background: #242e42d4;
+    color: #cdd3dd;
+}
+
+body, a {
+  color:#cdd3dd;
+}
+
+a:visited {
+  color:#cdd3dd;
+}
+
 .tab {
     overflow: hidden;
     border: 1px solid #ccc;
@@ -56,4 +69,56 @@
 
   .radio {
     display:inline-table;
+  }
+
+  .b-green-button {
+    background: #00bf66;
+    border: 1px solid #00bf66;
+    border-radius: 20px;
+    padding: 6px 14px;
+    text-decoration: none;
+
+  }
+
+  .b-green-button:hover {
+    background: #000;
+    color: #fff;
+    border-color: #fff;
+  }
+
+  input[type="submit" i] {
+    background: #00bf66;
+    border: 1px solid #00bf66;
+    border-radius: 20px;
+    padding: 6px 14px;
+    text-decoration: none;
+
+  }
+
+  #notice {
+    color: green;
+    padding: 8px;
+    text-decoration: underline;
+    font-size: 20px;
+  }
+
+  #ticket_item_bxnum {
+    width: 40px;
+  }
+
+  #ticket_item_stnum {
+    width: 40px;
+  }
+
+  #ticket_item_starnum {
+    width: 40px;
+  }
+
+  #ticket_item_lotnum {
+    width: 40px;
+  }
+
+  .ticket_item_ttype {
+    display: flex;
+    float: left;
   }
