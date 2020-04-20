@@ -25,6 +25,7 @@ gem 'simple_form'
 gem 'jquery-rails'
 gem 'jquery-turbolinks'
 gem 'dependent-fields-rails'
+gem 'jquery-datatables', '~> 1.10', '>= 1.10.15'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

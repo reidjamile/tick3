@@ -4,7 +4,7 @@ class TicketListsController < ApplicationController
   # GET /ticket_lists
   # GET /ticket_lists.json
   def index
-    @ticket_lists = TicketList.all
+    @ticket_lists = TicketList.order(params[:sort])
     @ticket_list = TicketList.new
   end
 
@@ -20,6 +20,7 @@ class TicketListsController < ApplicationController
 
   # GET /ticket_lists/1/edit
   def edit
+    
   end
 
   # POST /ticket_lists

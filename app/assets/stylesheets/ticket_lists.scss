@@ -5,6 +5,12 @@
 body {
   background: #242e42d4;
     color: #cdd3dd;
+  text-align: center;
+}
+
+table {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 body, a {
@@ -77,6 +83,7 @@ a:visited {
     border-radius: 20px;
     padding: 6px 14px;
     text-decoration: none;
+    color:#000;
 
   }
 
@@ -92,6 +99,7 @@ a:visited {
     border-radius: 20px;
     padding: 6px 14px;
     text-decoration: none;
+    cursor: pointer;
 
   }
 
@@ -122,3 +130,57 @@ a:visited {
     display: flex;
     float: left;
   }
+
+  #ticket-items-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    display: table;
+    margin-bottom: 50px;
+  }
+
+
+  table, td, th {  
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  table {
+    border-collapse: collapse;
+    margin-bottom:30px;
+  }
+  
+  th, td {
+    padding: 15px;
+    text-align: center;
+  }
+
+  #index-table {
+    height: 400px;
+    width: 500px;
+    display: inline-block;
+    overflow: overlay;
+    scrollbar-color: rebeccapurple green;
+    text-align: center;
+    margin-top:50px;
+  }
+
+  ::-webkit-scrollbar-track-piece  {
+    background-color: #C2D2E4;
+    }
+
+    .dash-button {
+      background: #fd0000;
+      border-radius: 20px;
+      padding: 6px 14px;
+      text-decoration: none;
+      color:#000;
+      margin-top:50px
+    }
+
+    .dash-button:visited {
+      color:#000;
+    }
+
+    .dash-button:hover {
+      color:#fff;
+    }

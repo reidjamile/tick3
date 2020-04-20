@@ -3,9 +3,44 @@
 <h3> Ticket ID #<%= @ticket_list.id %></h3>
 <h4>Ticket Items:</h4>
 
-<%= render @ticket_list.ticket_items %>
+
+<table>
+  <thead>
+    <tr style="border:2px solid #fff;">
+      <th> Ticket Type </th>
+      <th> Number 1</th>
+      <th> Number 2</th>
+      <th> Number 3</th>
+      <th> Number 4</th>
+      <th> BX </th>
+      <th> ST </th>
+      <th> * </th>
+      <th> LOTTERY </th>
+      
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ticket_list.ticket_items.each do |tl| %>
+      <tr style="border-bottom:2px solid #fff;">
+        <td> <%= tl.ttype %> </td>
+        <td> <%= tl.num1 %> </td>
+        <td> <%= tl.num2 %> </td>
+        <td> <%= tl.num3 %> </td>
+        <td> <%= tl.num4 %> </td>
+        <td> <%= tl.bxnum %> </td>
+        <td> <%= tl.stnum %> </td>
+        <td> <%= tl.starnum %> </td>
+        <td> <%= tl.lotnum %> </td>
+        
+       
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
 
 <%= link_to 'Add Items/Edit', edit_ticket_list_path(@ticket_list), class:"b-green-button" %> |
-<%= link_to 'Back', ticket_lists_path %>
+<%= link_to 'Back To Dashboard', ticket_lists_path %>
 
 

@@ -1,6 +1,9 @@
-<h1>Editing Ticket List</h1>
+<h1>Editing Ticket #<%= @ticket_list.id %></h1>
 
+<div style="display:flex1;">
 <%= render 'form', ticket_list: @ticket_list %>
+
+</div>
 
 <div id="ticket-items-wrapper">
     <%= render @ticket_list.ticket_items %>
@@ -9,6 +12,5 @@
     </div>
 </div>
 
-<%= link_to 'Show', @ticket_list %> |
-<%= link_to 'Back', ticket_lists_path %>
+<%= link_to 'Back To Dashboard', ticket_lists_path, class:"dash-button" %>
 
