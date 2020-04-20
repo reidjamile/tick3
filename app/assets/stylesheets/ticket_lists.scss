@@ -187,3 +187,9 @@ a:visited {
     .dash-button:hover {
       color:#fff;
     }
+
+    @media print{    
+    .no-print, .no-print * {
+        display: none !important;
+    }
+}

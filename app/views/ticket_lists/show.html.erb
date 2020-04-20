@@ -1,6 +1,9 @@
 <p id="notice"><%= notice %></p>
 
 <h3> Ticket ID #<%= @ticket_list.id %></h3>
+<h3>Created at #<%= @ticket_list.created_at %></h3>
+<h3>Updated at #<%= @ticket_list.updated_at %></h3>
+<br />
 <h4>Ticket Items:</h4>
 
 
@@ -40,7 +43,8 @@
   </tbody>
 </table>
 
-<%= link_to 'Add Items/Edit', edit_ticket_list_path(@ticket_list), class:"b-green-button" %> |
-<%= link_to 'Back To Dashboard', ticket_lists_path %>
+<%= link_to 'Add Items/Edit', edit_ticket_list_path(@ticket_list), class:"b-green-button no-print" %> 
+<button class="no-print" onclick="window.print()">Print</button> 
+<%= link_to 'Back To Dashboard', ticket_lists_path, class:"dash-button no-print" %>
 
 

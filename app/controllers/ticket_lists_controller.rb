@@ -6,6 +6,7 @@ class TicketListsController < ApplicationController
   def index
     @ticket_lists = TicketList.order(params[:sort])
     @ticket_list = TicketList.new
+    @ticket_last = TicketList.last
   end
 
   # GET /ticket_lists/1
