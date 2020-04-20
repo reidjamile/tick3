@@ -1,10 +1,23 @@
 <h1>Editing Ticket #<%= @ticket_list.id %></h1>
+<h3>Created at #<%= @ticket_list.created_at %></h3>
+<h3>Updated at #<%= @ticket_list.updated_at %></h3>
 
 <div style="display:flex1;">
 <%= render 'form', ticket_list: @ticket_list %>
-
 </div>
-
+<table style="margin-bottom:0px">
+    <tr>
+            <th style="border: 1px solid;"> Type:</td>
+            <th style="border: 1px solid;"> Num1:</td>
+            <th style="border: 1px solid;"> Num2:</td>
+            <th style="border: 1px solid;"> Num3:</td>
+            <th style="border: 1px solid;"> Num4:</td>
+            <th style="border: 1px solid;"> BX:</td>
+            <th style="border: 1px solid;"> ST:</td>
+            <th style="border: 1px solid;"> * </td>
+            <th style="border: 1px solid;"> Lottery:</td>
+    </tr>
+</table>
 <div id="ticket-items-wrapper">
     <%= render @ticket_list.ticket_items %>
     <div id="form">

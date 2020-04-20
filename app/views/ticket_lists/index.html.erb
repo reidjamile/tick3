@@ -10,16 +10,18 @@
 
 <br />
 
+<h1>Previous Tickets</h1>
+
 <div id="index-table">
 <table>
   <thead>
     <tr>
-      <th colspan="4"> <h1>Previous Tickets</h1></th>
-    </tr>
-    <tr>
       <th> <%= link_to "Ticket ID", :sort => "id" %> </th>
-      <th> </th>
-      <th> </th>
+      <th> Created </th>
+      <th> Updated </th>
+      <th> View </th>
+      <th> Edit </th>
+      <th> Delete </th>
       
     </tr>
   </thead>
@@ -27,7 +29,9 @@
   <tbody>
     <% @ticket_lists.each do |ticket_list| %>
       <tr>
-        <td> Ticket ID #<%= ticket_list.id %> </td>
+        <td> Ticket #<%= ticket_list.id %> </td>
+        <td><%= ticket_list.created_at %></td>
+        <td><%= ticket_list.updated_at %></td>
         <td><%= link_to 'View', ticket_list %></td>
         <td><%= link_to 'Edit', edit_ticket_list_path(ticket_list) %></td>
         <td><%= link_to 'Destroy', ticket_list, method: :delete, data: { confirm: 'Are you sure?' } %></td>

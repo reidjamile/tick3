@@ -34,10 +34,10 @@ function seePlay(x) {
             </div>
         </span>        
         <span id="pick-case" style="display: flex;justify-content: space-evenly;width:40%, float:left;">
-            <span><%= f.input :bxnum, as: :decimal, input_html: { step: 0.01 }, label: "BX"  %></span>
-            <span><%= f.input :stnum, as: :decimal, input_html: { step: 0.01 }, label: "ST"  %></span>
-            <span><%= f.input :starnum, as: :decimal, input_html: { step: 0.01 }, label: "*"  %></span>
-            <span><%= f.input :lotnum,as: :decimal, input_html: { step: 0.01 }, label: "Lottery"  %></span>
+            <span><%= f.input :bxnum, as: :integer, input_html: { step: 1.0, required: true, value: 0, min:0 }, label: "BX"  %></span>
+            <span><%= f.input :stnum, collection: 0..5, input_html: { step: 1.0, required: true, value: 0, max: 5}, label: "ST"  %></span>
+            <span><%= f.input :starnum, as: :integer, input_html: { step: 1.0, required: true, value: 0, min:0 }, label: "*"  %></span>
+            <span><%= f.input :lotnum,as: :integer, input_html: { step: 1.0, required: true, value: 0, min:0 }, label: "Lottery"  %></span>
         </span>
         <br />
         
